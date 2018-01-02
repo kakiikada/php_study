@@ -5,10 +5,13 @@
   border-color: rgba(60,30,0,1);
   font-family:serif;
 }
-
 body,html{
   width:100%;
   height:100%;
+}
+
+a{
+  text-decoration: none;
 }
 
 .container{
@@ -30,8 +33,8 @@ html,body{
 
 h1{font-family:sans-serif; font-size: 50px; line-height:50px; font-weight: bold;}
 h2{font-size: 25px; line-height:35px; font-weight: bold;}
-h3{font-size:30px; line-height: 30px; font-weight: bold;}
-p{font-size: 16px; line-height: 16px;}
+h3{font-size:35px; line-height: 30px; font-weight: bold;}
+p{font-size: 16px; line-height: 18px;}
 /*ここからヘッダーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 header{
   position: fixed;
@@ -39,49 +42,67 @@ header{
   padding:30px 0 10px 0;
   height:100px;
   width:100%;
-  background-color:rgba(255,255,255,0.5);
+  background-color:rgba(60,30,0,1);
+  border-bottom: solid 1px rgba(0,0,0,0.2);
+  box-shadow:0 10px 5px 0 rgba(0,0,0,0.1);
 }
 
 header h1{
   display:inline-block;
+  color:rgba(255,240,230,1);
+  font-family: Yu Gothic,sans-serif;
 }
 
 h1 span{
+  color:rgba(255,240,230,1);
   font-size:30px;
   line-height: 30px;
 }
-/*ここからformーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
-/*ここからmenuーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+/*ここからmainーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 .class{
   margin-top:150px;
 }
 
-.type{
+main .type{
   display: inline-block;
+  color:rgba(255,240,230,1);
+  line-height:50px;
+  letter-spacing: 10px;
   margin:60px;
-  width:150px;
-  border-bottom: dashed 1px;
+  height:50px;
+  width:80%;
+  background-color:rgba(60,30,0,1);
 }
 
-.name{
+main .name{
   display: inline-block;
-  margin:
+  padding:0 3px;
+  margin:2px;
 }
 
-.comment{
+main .price{
+  display: inline-block;
+  padding:0 20px;
+  font-weight:bold;
+  border-bottom: solid 2px ;
+}
+
+ main .comment{
+  padding:10px 30px;
   margin-top:15px;
   margin-bottom:10px;
 }
 
-select{
+main select{
   height:30px;
   width:150px;
   margin-bottom:60px;
   letter-spacing: 5px;
+  background-color: rgba(255,240,230,1);
 }
 
-.button{
+main .button{
   width:150px;
   height:30px;
   margin-bottom:60px;
@@ -89,8 +110,88 @@ select{
   border-radius: 0 10px 10px 0;
 }
 
-.space{
+main .space{
   display: inline-block;
   height:30px; width:80%;
-  border-bottom: solid 2px rgba(60,30,0,1);
+}
+
+.order-button{
+  color:rgba(255,240,230,1);
+  font-size:25px;
+  height:120px;
+  width:120px;
+  padding:5px;
+  margin-bottom:100px;
+  background-color: rgba(60,30,0,1);
+  border: solid 2px rgba(255,240,230,0.1);
+  box-shadow: 0 0 0 10px rgba(60,30,0,1);
+  transition:0.3s;
+}
+
+.order-button:hover{
+  background-color: rgba(60,30,0,0.5);
+  border: solid 2px rgba(255,240,230,0.5);
+  box-shadow: 0 0 0 10px rgba(60,30,0,0.8);
+}
+
+footer{
+  height:30px;
+  width:100%;
+  background-color: rgba(60,30,0,1);
+}
+/*フッター*/
+footer a{
+  color: rgba(255,240,230,0.5);
+  transition: 0.3s;
+}
+
+footer a:hover{
+  color: rgba(255,240,230,1);
+}
+/*ここからorder.php*/
+.order-page .paper{
+  width:500px;
+  margin:30px auto;
+  background-color:rgba(255,240,230,1);
+  border-radius: 5px;
+  box-shadow:5px 5px 3px 0 rgba(60,30,0,0.3);
+}
+
+.order-page h2{
+  display: inline-block;
+  font-size:20px;
+  line-height: 24px;
+  width: 80%;
+  margin:10px;
+  border-bottom:solid 1px;
+}
+
+.order-page .name{
+  font-size:26px;
+  font-weight:bold;
+}
+
+.order-page .price-box{
+  width:100px;
+
+  margin:5px auto 50px auto;
+}
+
+.order-page .number{
+  float:left;
+  display: inline-block;
+}
+
+.order-page .price{
+  float:right;
+  display: inline-block;
+}
+
+.order-page .total{
+  display: inline-block;
+  font-size:20px;
+  line-height: 24px;
+  width: 80%;
+  margin:10px;
+  border-top:double 3px;
 }

@@ -1,29 +1,29 @@
 <?php
-require_once('date.php');
-require_once('menu-index.php');
-// require_once('date.php');
-// 上のdataをmenu-indexのmenu.php直下に
-// ココで読み込んでいる。と・・・なるほど。
-// menu-indexを読み込んでいる必要性はあまり無いように見えます…フォームでアクションを渡す前提なら、基本的にrequireしなくてもいいはずです・・・
+
 class Menu{
   private $genre;
   private $name;
   private $comment;
   private $price;
 
-  private $orderCount = 0;
+  private $orderCount;
+
+
+// 追加開始 つかうｗ合計金額出すw
+
+
+
+
+// 追加終了
+// これを書く場所に配置して使ってみるといいかも
 
   public function __construct($genre,$name,$comment,$price){
-    $this->genre = $genre;
-    $this->name = $name;//そろえられたｗ　＝そろえてみたかったｗ
+    $this->genre   = $genre;
+    $this->name    = $name;
     $this->comment = $comment;
-    $this->price = $price;
+    $this->price   = $price;
   }
-  //エラーにならないかなぁ・・・開けると
-  // エラーにならなければもちろんいいが…俺もやったことないｗ
-  // もしエラーにならないなら戻す。
-  // それとゲッターは見つけたがセッターは・・・・いや、まだ処理の流れ理解しきってないか俺。
-  // シンタックス的におかしくなってたので…💧
+
 //gettar--------------------------------------
   public function getGenre(){
     return $this->genre;
@@ -37,11 +37,18 @@ class Menu{
     return $this->comment;
   }
 
+
   public function getPrice(){
     return $this->price;
   }
-  //setter----------------------------------
-  public function setOrderCount(){
+
+  public function getOrderCount(){
+    return $this->orderCount;
+  }
+
+  //セッターーーーーーーーーーーーーーーーーーーー
+
+  public function setOrderCount($orderCount){
     $this->orderCount = $orderCount;
   }
 
